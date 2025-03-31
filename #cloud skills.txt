@@ -1,0 +1,18 @@
+#cloud skills
+neobim
+git & GitHub
+google cloud
+aws paid 
+#prompt enginnering 
+deep learning institute
+postman
+#devops
+api testing 
+cicd
+docar 
+cobernaties
+zenkins
+terraform
+#script
+
+
