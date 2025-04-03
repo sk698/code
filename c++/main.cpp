@@ -1,47 +1,44 @@
 #include<iostream>
 using namespace std;
 
-
-class LinkedListNode{
-    public:
+class Node{
+    public: 
         int data;
-        LinkedListNode* next;
-    LinkedListNode(int data){
-        this -> data = data;
-        this -> next = NULL;
-    }
+        Node* next;
 
-
+        Node(int d){
+            data = d;
+            next = NULL;
+        }
 };
-
-void InsertAtHead(LinkedListNode* &tail,int d){
-    // new node create
-    LinkedListNode* temp = new LinkedListNode(d);
-    temp -> next = tail;
-    tail = temp;
-
+void InsertAtHead(Node* &, int d){
+    Node* temp = new Node(d);
+    temp -> next = head;
+    head = temp;
 }
 
-void print(LinkedListNode* &tail){
-    LinkedListNode* temp = tail;
-    while (temp != NULL)
-    {
+void InsertAtTail(Node* &tail,int d){
+    Node* temp = new Node(d);
+    tail -> next = temp;
+    tail = tail -> next;
+}
+void printNode(Node* &head){
+    Node* temp = head;
+    while(temp != NULL){
         cout << temp -> data << " ";
         temp = temp -> next;
     }
-    cout << endl;
-    
+    cout << " ";
 }
-int main(){
-    LinkedListNode* node1 = new LinkedListNode(10);
-    cout << node1 -> data << endl;
-    cout << node1 -> next << endl;
-    LinkedListNode* tail = node1;
-    print(tail);
-    InsertAtHead(tail,5);
-    InsertAtHead(tail,8);
-    print(tail);
 
+int main(){
+    Node* node1 = new Node(10);
+    Node* head = node1;
+    Node* tail = node1;
+    printNode(tail);
+    InsertAtTail(tail,5);
+    printNode(tail);
 
     return 0;
-}
+
+} 
