@@ -1,13 +1,12 @@
-void InsertionSort(int arr[], int n){
-//     for(int i = 1; i < n; i++){
-//         int temp = arr[i];
-//         for(int j = i; j > 0; j--){
-//             if(arr[j] < arr[j-1]){
-//                 arr[j] = arr[j-1];
-//                 arr[j-1] = temp;
-//             }else{
-//                 break;
-//             }
-//         }
-//     }
-// }
+#include<iostream>
+using namespace std;
+
+
+int main(){
+    int arr[5] = {3,1,5,4,6};
+    int* ptr = arr;
+    for(int i = 0; i < 5; i++){
+        cout << *arr << endl;
+        *arr = *(arr+i+1);
+    }
+}
