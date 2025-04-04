@@ -11,11 +11,11 @@ class Node{
             next = NULL;
         }
 };
-void InsertAtHead(Node* &, int d){
-    Node* temp = new Node(d);
-    temp -> next = head;
-    head = temp;
-}
+// void InsertAtHead(Node* &, int d){
+//     Node* temp = new Node(d);
+//     temp -> next = head;
+//     head = temp;
+// }
 
 void InsertAtTail(Node* &tail,int d){
     Node* temp = new Node(d);
