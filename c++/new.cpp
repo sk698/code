@@ -63,4 +63,7 @@ int main(){
     Output(arr,n);
     Delete(arr,n);
     Output(arr,n);
+
+    delete []arr;
+    return 0;
 }
