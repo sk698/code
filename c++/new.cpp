@@ -20,18 +20,18 @@ void Output(int arr[], int n){
 }
 void Insert(int arr[], int& n){
     int a;
-    cout << "Enter the index where you want to enter the element: ";
+    cout << "Enter Insertion index: ";
     cin >> a;
     if(a <= n){
         n++;
         for(int i = n-1; i >= a; i--){
             arr[i] =  arr[i-1];
         }
-        cout << "Enter the number you want to enter: ";
+        cout << "Enter the number you want to Insert: ";
         cin >> arr[a];
     }
     else{
-        cout << "Invalid index" << endl;
+        cout << endl << "Invalid index" << endl << endl;
         Insert(arr,n);
     }
 
@@ -39,7 +39,7 @@ void Insert(int arr[], int& n){
 
 void Delete(int arr[], int& n){
     int a;
-    cout << "Enter the index you want to delete: ";
+    cout << "Enter Deletion index: ";
     cin >> a;
     if(a < n){
         for(int i = a; i < n; i++){
@@ -48,7 +48,7 @@ void Delete(int arr[], int& n){
         n--;
     }
     else{
-        cout << "Invalid index" << endl;
+        cout<< endl << "Invalid index" << endl << endl;
         Delete(arr,n);
     }
 }
